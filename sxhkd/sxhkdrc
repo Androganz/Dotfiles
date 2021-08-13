@@ -4,29 +4,25 @@
 
 # terminal emulator
 super + Return
-	alacritty  
+	alacritty 
+
 # program launcher
 super + r 
-	./.local/bin/Dmenu-script/j4-dmenu.sh
-
-#screenshoot tools 
-ctrl + Print 
-	./.local/bin/Dmenu-script/flameshot-script.sh
-
-#screenrecorder tools 
-super + g 
-	./.local/bin/Dmenu-script/Screenrecorder.sh
-
-#brightness control 
-XF86MonBrightnessDown  
-	 xbacklight -dec 2
-
-XF86MonBrightnessUp 
-	xbacklight -inc 2
+	./.local/bin/rofi-launcher.sh 
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+#brightness control 
+XF86MonBrightnessDown 
+	xbacklight -dec 5
+
+XF86MonBrightnessUp 
+	xbacklight -inc 5  
+
+ctrl + Print 
+	scrot 
 
 #
 # bspwm hotkeys
